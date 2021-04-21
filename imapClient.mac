@@ -1,0 +1,10 @@
+ROUTINE IMAP
+
+imaptest(host,user,password) public
+{
+    set ssl = ##class(%SYS.Python).Import("ssl")
+    zw ssl
+    set sslctx = ssl."create_default_context"()
+    quit
+}
+

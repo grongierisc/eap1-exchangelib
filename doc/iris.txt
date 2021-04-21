@@ -1,0 +1,103 @@
+Help on built-in module iris:
+NAME
+    iris
+CLASSES
+    builtins.object
+        isc.StdoutType
+        isc.gref
+
+    Global = class gref(builtins.object)
+     |  isc global reference object
+     |
+     |  Methods defined here:
+     |
+     |  __delitem__(self, key, /)
+     |      Delete self[key].
+     |
+     |  __getitem__(self, key, /)
+     |      Return self[key].
+     |
+     |  __len__(self, /)
+     |      Return len(self).
+     |
+     |  __setitem__(self, key, value, /)
+     |      Set self[key] to value.
+     |
+     |  get(...)
+     |      isc.global getter method
+     |
+     |  getAsBytes(...)
+     |      isc.global get as bytes method
+     |
+     |  kill(...)
+     |      isc.global kill method
+     |
+     |  order(...)
+     |      isc.global order method
+     |
+     |  ----------------------------------------------------------------------
+     |  Static methods defined here:
+     |
+     |  __new__(*args, **kwargs) from builtins.type
+     |      Create and return a new object.  See help(type) for accurate signature.
+
+    Stdout = class StdoutType(builtins.object)
+     |  isc.Stdout objects
+     |
+     |  Methods defined here:
+     |
+     |  flush(...)
+     |      sys.stdout.flush
+     |
+     |  isatty(...)
+     |      sys.stdin.readline
+     |
+     |  read(...)
+     |      sys.stdin.readline
+     |
+     |  read1(...)
+     |      sys.stdin.readline
+     |
+     |  readline(...)
+     |      sys.stdin.readline
+     |
+     |  write(...)
+     |      sys.stdout.write
+     |
+     |  ----------------------------------------------------------------------
+     |  Static methods defined here:
+     |
+     |  __new__(*args, **kwargs) from builtins.type
+     |      Create and return a new object.  See help(type) for accurate signature.
+     |
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |
+     |  encoding
+     |      encoding
+FUNCTIONS
+    cls(...)
+        iris.cls method
+
+    gref(...)
+        iris.global method
+
+    ref(...)
+        iris.ref method
+
+    tcommit(...)
+        iris.tcommit method
+
+    tlevel(...)
+        iris.tlevel method
+
+    trollback(...)
+        iris.trollback method
+
+    trollbackone(...)
+        iris.trollbackone method
+
+    tstart(...)
+        iris.tstart method
+FILE
+    (built-in)
