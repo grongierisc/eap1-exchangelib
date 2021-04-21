@@ -13,6 +13,8 @@ Open Grongier.Production
 - email = your mail
 - password = ...
 
+To work, you have to be on the vpn
+
 # Todo 
 
 - [ ] Use interoperabilty Credential
