@@ -9,9 +9,9 @@ Go to production
 
 Open Grongier.Production
 
-user = AD user
-email = your mail
-password = ...
+- user = AD user
+- email = your mail
+- password = ...
 
 # Todo 
 
