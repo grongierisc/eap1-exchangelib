@@ -85,6 +85,8 @@ Then in OnTask, I call a python method who fetch unread messages.
 
 **Here I don't know if it's a good behavior to "import iris" lib each time ?**
 
+## Why don't you use %Net.MailMessage
+
 I have built an ObjectScript mail object because Body in %Net.MailMessage is a Stream.
 
 Stream doesn't work yet in embedded python, in fact, if i do :
@@ -129,6 +131,5 @@ Overall, this is a great feature. I don't understand how we have been able to li
 # Todo 
 
 - [x] Use interoperabilty Credential
-- [ ] Report bug with stream
 - [ ] Clean up code
 - [ ] Write documentation
