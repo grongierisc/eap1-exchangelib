@@ -9,15 +9,17 @@ Go to production
 
 Open Grongier.Production
 
-- user = AD user
-- email = your mail
+- email = your mail (example : guillaume.rongier@intersystems.com)
+
+Create a Credential with :
+- user = AD user (example : ISCINTERNAL/grongier)
 - password = ...
 
-To work, you have to be on the vpn
+To work, you have to be on the vpn.
 
 # Todo 
 
-- [ ] Use interoperabilty Credential
+- [x] Use interoperabilty Credential
 - [ ] Report bug with stream
 - [ ] Clean up code
 - [ ] Write documentation
