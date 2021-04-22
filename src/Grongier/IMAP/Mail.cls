@@ -1,5 +1,5 @@
 /// Description
-Class Grongier.IMAP.Mail Extends %SerialObject
+Class Grongier.ExchangeLib.Mail Extends %SerialObject
 {
 
 /// Description
@@ -19,7 +19,7 @@ Storage Default
 </Value>
 </Data>
 <State>MailState</State>
-<StreamLocation>^Grongier.IMAP.MailS</StreamLocation>
+<StreamLocation>^Grongier.ExchangeLib.MailS</StreamLocation>
 <Type>%Storage.Serial</Type>
 }
 

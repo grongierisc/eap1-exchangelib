@@ -1,9 +1,9 @@
-Class Grongier.IMAP.DemoService Extends Ens.BusinessService
+Class Grongier.ExchangeLib.DemoService Extends Ens.BusinessService
 {
 
-Parameter ADAPTER = "Grongier.IMAP.InboundAdapter";
+Parameter ADAPTER = "Grongier.ExchangeLib.InboundAdapter";
 
-Method OnProcessInput(pMailMessage As Grongier.IMAP.Mail, pOutput As %RegisteredObject) As %Status
+Method OnProcessInput(pMailMessage As Grongier.ExchangeLib.Mail, pOutput As %RegisteredObject) As %Status
 {
 	set tSC = $$$OK
 	$$$LOGINFO(pMailMessage.Subject)
