@@ -12,15 +12,9 @@ Property credential As %SYS.Python;
 Property account As %SYS.Python;
 
 /// Description
-Property user As %String;
-
-/// Description
 Property email As %String;
 
-/// Description
-Property password As %String;
-
-Parameter SETTINGS = "user,email,password";
+Parameter SETTINGS = "email,Credentials:Basic:credentialsSelector";
 
 Method OnTask() As %Status
 {
@@ -62,9 +56,9 @@ Method OnInit() As %Status
             Set sc =  ##class(%SYS.Python).Install("exchangelib")
             Set ..exchangelib = ##class(%SYS.Python).Import("exchangelib")
         }
-
+        If '$IsObject(..%CredentialsObj) Do ..CredentialsSet(..Credentials) If '$IsObject(..%CredentialsObj) { Set sc=$$$EnsError($$$EnsErrNoCredentials,..Credentials) Quit }
         //Build credential
-        Set args = { "username": (..user) , "password": (..password) }
+        Set args = { "username": (..%CredentialsObj.Username) , "password": (..%CredentialsObj.Password) }
         Set ..credential = ..exchangelib.Credentials(args...)
 
         //Build account
