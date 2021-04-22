@@ -31,7 +31,7 @@ Method OnTask() As %Status
 	Quit tSC
 }
 
-/// Description
+/// Can't use OnTask because embedded python can't overlaod cos method
 Method OnTaskPython() As %Status [ Language = python ]
 {
     import iris
