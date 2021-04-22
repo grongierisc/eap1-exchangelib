@@ -20,7 +20,7 @@ To work, you have to be on the vpn.
 
 # FAQ
 
-- Why this demo ?
+## Why this demo ?
 
 In France, 90% of data platform customer use the interoperability framework.
 
@@ -28,15 +28,15 @@ In France, 90% of data platform customer use the interoperability framework.
 
 No one use, cos only applications. So, it was natural for me to test embedded python in the interoperability framework.
 
-- Why an adapter ?
+## Why an adapter ?
 
 The interoperability frameworks is always missing connectors and IMAP is a long standing request that customers ask even before I start working on InterSystems technologies (2013).
 
-- How this adaptor works ?
+## How this adaptor works ?
 
 I use a python library called [exchangelib](https://github.com/ecederstrand/exchangelib).
 
-I have overload the callback OnInit to load this lib and configure it.
+I overload the callback OnInit to import this lib and configure it.
 
 ```objectscript
 Method OnInit() As %Status
@@ -95,24 +95,24 @@ mail = iris.cls("%Net.MailMessage")
 
 Property TextData doesn't exist in python world.
 
-- What was a good experience ?
+## What was a good experience ?
 
 * It's convenient to named args in python methods with the json format.
 * The mix ObjectScript/python is impressive. 
   * Very pleasant for an ObjectScript developer.
   * iris.cls in python is great
 
-- What can be improve ?
+## What can be improve ?
 
 * ##class(%SYS.Python).Install doesn't seem to use cache, it's always reinstalling stuff
 * ##class(%SYS.Python).Import return just 0 in case of error is it enough ?
 * Stream property is not supported
 
-- TL;TR
+## TL;TR
 
 Overall, this is a great feature. I don't understand how we have been able to live without it ?
 
-- What do you wish ?
+## What do you wish ?
 
 * One day, we don't have to use ObjectScript anymore.
 * Have persistent object in pure python
