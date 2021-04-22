@@ -97,6 +97,21 @@ mail = iris.cls("%Net.MailMessage")
 
 Property TextData doesn't exist in python world.
 
+### SOLVED :
+
+```python
+mail = iris.cls("%Net.MailMessage")
+```
+
+is not equal to
+
+```python
+mail = iris.cls("%Net.MailMessage")._New()
+```
+
+iris.cls() returns the IRIS class not an instance of the class.  It's the equivalent of doing ##class() 
+
+
 ## What was a good experience ?
 
 * It's convenient to use named args in python methods with the json format.
