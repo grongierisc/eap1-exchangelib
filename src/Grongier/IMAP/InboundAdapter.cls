@@ -37,9 +37,9 @@ Method OnTaskPython() As %Status [ Language = python ]
     import iris
     for item in self.account.inbox.filter(is_read=False).order_by('-datetime_received')[:100]:
         #print(item.subject, item.body, item.attachments)
-        mail = iris.cls("Grongier.ExchangeLib.Mail")
+        mail = iris.cls("%Net.MailMessage")._New()
         mail.Subject = item.subject
-        mail.Body = item.body.__str__()
+        mail.TextData.Write(item.body.__str__())
         self.BusinessHost.ProcessInput(mail)
 }
 
@@ -49,6 +49,7 @@ Method OnInit() As %Status
 
     Try {
         //Import
+        #dim email as %Net.MailMessage
         Set ..exchangelib = ##class(%SYS.Python).Import("exchangelib")
         //Can't load try to install
         if ..exchangelib = 0 {
