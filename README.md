@@ -83,7 +83,7 @@ Then in OnTask, I call a python method who fetch unread messages.
         self.BusinessHost.ProcessInput(mail)
 ```
 
-Here I don't know if it's a good behavior to "import iris" lib each time ?
+**Here I don't know if it's a good behavior to "import iris" lib each time ?**
 
 I have built an ObjectScript mail object because Body in %Net.MailMessage is a Stream.
 
@@ -97,7 +97,7 @@ Property TextData doesn't exist in python world.
 
 ## What was a good experience ?
 
-* It's convenient to named args in python methods with the json format.
+* It's convenient to use named args in python methods with the json format.
 * The mix ObjectScript/python is impressive. 
   * Very pleasant for an ObjectScript developer.
   * iris.cls in python is great
